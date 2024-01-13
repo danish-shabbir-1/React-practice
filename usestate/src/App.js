@@ -1,10 +1,10 @@
-import UseStatePractice from './Components/UseState';
-import './App.css';
+import UseStatePractice from "./Components/UseState";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-<UseStatePractice />
+      <UseStatePractice />
     </div>
   );
 }

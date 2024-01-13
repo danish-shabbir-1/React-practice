@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import PropsPractice from '../Props'
 
-const UseStatePractice = () => {
+const UseStatePractice = (props) => {
+  console.log(props);
     const [inputValue, setinputValue] = useState('DANISH')
 
 function onChange(abc) {
@@ -10,6 +12,7 @@ function onChange(abc) {
 
   return (
     <div>
+      {props.h1}
         <h1>{inputValue}</h1>
       <input type='text' placeholder='Please Enter Any Value' value={inputValue} onChange={onChange}/> 
     </div>
