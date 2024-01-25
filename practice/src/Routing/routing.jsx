@@ -1,6 +1,6 @@
 import React from 'react'
 
-const routing = () => {
+const Routing = () => {
   return (
     <div>
       
