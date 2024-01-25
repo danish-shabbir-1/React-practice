@@ -8,4 +8,4 @@ const Routing = () => {
   )
 }
 
-export default routing
+export default Routing
