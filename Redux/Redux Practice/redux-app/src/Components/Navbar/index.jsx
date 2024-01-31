@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './../../App.css'
 import { useSelector , useDispatch  } from 'react-redux'
+import { updateTheme } from '../../Store/themeReducer'
 
 const Navbar = () => {
 
@@ -9,11 +10,12 @@ const Navbar = () => {
 
 const theme = useSelector((state) => state.theme);
 
+console.log(theme)
   return (
 <div className='box-container' style={{ background: theme }}>
-      <div onClick={() => dispatch(setColor(0))} className="red box"></div>
-      <div onClick={() => dispatch(setColor(1))} className="green box"></div>
-      <div onClick={() => dispatch(setColor(2))} className="blue box"></div>
+      <div onClick={() => dispatch(updateTheme('red'))} className="red box"></div>
+      <div onClick={() => dispatch(updateTheme('green'))} className="green box"></div>
+      <div onClick={() => dispatch(updateTheme('blue'))} className="blue box"></div>
     </div>
   )
 }
