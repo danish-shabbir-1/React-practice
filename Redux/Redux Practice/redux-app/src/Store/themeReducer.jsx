@@ -1,18 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const themeSlice = createSlice({
-    name: 'theme',
-    initialState: {
-      theme: 'blue'
+  name: "theme",
+  initialState: {
+    theme: "red",
+  },
+  reducers: {
+    updateTheme: (state , data) => {
+      state.theme = data.payload;
     },
-    reducers: {
-      updateTheme:(state, data) => {
-        state.theme = data.payload
-      }
-    }
-  })
+  },
+});
 
-  export const { updateTheme } = themeSlice.actions
+export const { updateTheme } = themeSlice.actions;
 
-
-  export default themeSlice
+export default themeSlice;

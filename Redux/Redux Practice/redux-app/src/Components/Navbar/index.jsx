@@ -1,16 +1,18 @@
 import './../../App.css'
-import { useSelector , useDispatch  } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { updateTheme } from '../../Store/themeReducer'
 
 const Navbar = () => {
 
-  const dispatch = useDispatch();
+  
+  const theme = useSelector((state) => state.theme)
+  const dispatch = useDispatch()
+  
+  // console.log(theme);
 
-const theme = useSelector((state) => state.theme);
-
-console.log(theme)
   return (
-<div className='box-container' style={{ background: theme }}>
+<div className='box-container' style={{background : theme}}>
       <div onClick={() => dispatch(updateTheme('red'))} className="red box"></div>
       <div onClick={() => dispatch(updateTheme('green'))} className="green box"></div>
       <div onClick={() => dispatch(updateTheme('blue'))} className="blue box"></div>
